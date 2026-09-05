@@ -1,0 +1,49 @@
+{
+  "name": "autonomous-business-os",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Autonomous digital business operating system with a hard zero-spend guardrail.",
+  "scripts": {
+    "dev": "node api.js && next dev",
+    "build": "node api.js && next build",
+    "start": "node api.js && next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "migrate": "npx tsx database/migrate.ts",
+    "seed": "npx tsx database/seed.ts",
+    "worker": "npx tsx scripts/worker-daemon.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.45.4",
+    "class-variance-authority": "0.7.0",
+    "clsx": "2.1.1",
+    "lucide-react": "0.441.0",
+    "next": "14.2.5",
+    "pg": "8.12.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwind-merge": "2.5.2",
+    "tailwindcss-animate": "1.0.7",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "@types/pg": "8.11.6",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@vitest/coverage-v8": "2.0.5",
+    "autoprefixer": "10.4.20",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.5",
+    "postcss": "8.4.41",
+    "tailwindcss": "3.4.10",
+    "tsx": "^4.23.13",
+    "typescript": "5.5.3",
+    "vitest": "2.0.5"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  }
+}
